@@ -35,7 +35,7 @@ const submitHandler=async()=>{
     };//something
     const password=confirmPassword;
     const { data } = await axios.post(
-      "http://localhost:8000/api/v1/user/login",
+      "https://chat-website-beta.vercel.app/api/v1/user/login",
       {  email,password },
       config
     );

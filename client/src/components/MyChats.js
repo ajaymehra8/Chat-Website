@@ -21,7 +21,7 @@ const fetchChats=async()=>{
     }
   
   }
-  const {data}=await axios.get(`http://localhost:8000/api/v1/chat`,config);
+  const {data}=await axios.get(`https://chat-website-beta.vercel.app/api/v1/chat`,config);
   console.log(data);
   setChats(data);
   }catch(err){

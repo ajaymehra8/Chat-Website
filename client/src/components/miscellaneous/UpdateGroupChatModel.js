@@ -40,7 +40,7 @@ const UpdateGroupChatModel = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.put(
-        "http://localhost:8000/api/v1/chat/rename",
+        "https://chat-website-beta.vercel.app/api/v1/chat/rename",
         { chatId: selectedChat._id, chatName: groupChatName },
         config
       );
@@ -93,7 +93,7 @@ const handleGroup = (userToAdd) => {
         },
       };
       const { data } = await axios.get(
-        `http://localhost:8000/api/v1/user/?search=${query}`,
+        `https://chat-website-beta.vercel.app/api/v1/user/?search=${query}`,
         config
       );
 
@@ -134,7 +134,7 @@ const handleRemove = async (user1) => {
       },
     };
     const { data } = await axios.put(
-      `http://localhost:8000/api/v1/chat/groupremove`,
+      `https://chat-website-beta.vercel.app/api/v1/chat/groupremove`,
       {
         chatId: selectedChat._id,
         userId: user1._id,

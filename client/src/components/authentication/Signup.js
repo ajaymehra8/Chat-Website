@@ -89,7 +89,7 @@ const navigate=useNavigate();
       };
       const password=confirmPassword;
       const { data } = await axios.post(
-        "http://localhost:8000/api/v1/user/register",
+        "https://chat-website-beta.vercel.app/api/v1/user/register",
         { name, email,password },
         config
       );

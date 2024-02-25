@@ -72,7 +72,7 @@ const config={
   }
 
 }
-const {data}=await axios.get(`http://localhost:8000/api/v1/user/?search=${search}`,config);
+const {data}=await axios.get(`https://chat-website-beta.vercel.app/api/v1/user/?search=${search}`,config);
 setSearchResult(data);
 setLoading(false);
 
@@ -102,7 +102,7 @@ const config={
   }
 
 }
-const {data}=await axios.post(`http://localhost:8000/api/v1/chat`,{userId},config);
+const {data}=await axios.post(`https://chat-website-beta.vercel.app/api/v1/chat`,{userId},config);
 
 if(!chats.find((c)=>c._id===data._id)) setChats([data,...chats]);
 setSelectedChat(data);

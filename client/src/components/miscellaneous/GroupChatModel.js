@@ -49,7 +49,7 @@ const GroupChatModel = ({ children }) => {
         },
       };
       const { data } = await axios.get(
-        `http://localhost:8000/api/v1/user/?search=${query}`,
+        `https://chat-website-beta.vercel.app/api/v1/user/?search=${query}`,
         config
       );
 
@@ -90,7 +90,7 @@ const GroupChatModel = ({ children }) => {
       };
 
       const { data } = await axios.post(
-        "http://localhost:8000/api/v1/chat/group",
+        "https://chat-website-beta.vercel.app/api/v1/chat/group",
         {
           users: JSON.stringify(selectedUsers.map((u) => u._id)),
           name: groupChatName,

@@ -32,7 +32,7 @@ const defaultOptions={
   },
 }
 
-const ENDPOINT="http://localhost:8000";
+const ENDPOINT="https://chat-website-beta.vercel.app";
 var socket,selectedChatCompare;
 
 
@@ -59,7 +59,7 @@ Authorization:`Bearer ${user.token}`
   };
 
   setLoading(true);
-  const {data}=await axios.get(`http://localhost:8000/api/v1/message/${selectedChat._id}`,config);
+  const {data}=await axios.get(`https://chat-website-beta.vercel.app/api/v1/message/${selectedChat._id}`,config);
   setMessages(data);
 
   setLoading(false);
@@ -123,7 +123,7 @@ try {
     }
   };
 
-const {data}=await axios.post(`http://localhost:8000/api/v1/message`,{
+const {data}=await axios.post(`https://chat-website-beta.vercel.app/api/v1/message`,{
   content:newMessage,
   chatId:selectedChat._id
 },config);
