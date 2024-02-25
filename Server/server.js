@@ -19,7 +19,9 @@ const app = express();
 app.use(express.json());
 
 //cors policy
-
+app.get("/",(req,res)=>{
+  res.send("hello");
+  });
 const corsOptions = {
     origin: 'https://chat-website-client.vercel.app/', // Replace with your frontend's URL
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
@@ -44,9 +46,7 @@ app.use("/api/v1/message",messageRoutes)
 app.use(notFound);
 app.use(errorHandler);
 
-app.get("/",(req,res)=>{
-res.send("hello");
-})
+
 
 const server=app.listen(process.env.PORT, () => {
   console.log(`listening at port ${process.env.PORT}`);
