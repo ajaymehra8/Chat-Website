@@ -15,14 +15,8 @@ db();
 
 const app = express();
 
-//for accepting json data
-app.use(express.json());
-
-//cors policy
-app.get("/",(req,res)=>{
-  res.send("hello");
-  });
 const corsOptions = {
+
     origin: 'https://chat-website-client.vercel.app', // Replace with your frontend's URL
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,  // Enable credentials (cookies, authorization headers, etc.)
@@ -30,6 +24,15 @@ const corsOptions = {
   };
   
   app.use(cors(corsOptions));
+
+//for accepting json data
+app.use(express.json());
+
+//cors policy
+app.get("/",(req,res)=>{
+  res.send("hello");
+  });
+
 
   //user api endpoint
 
